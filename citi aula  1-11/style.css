@@ -1,0 +1,102 @@
+:root{
+    --corVerde: #228b22;
+}
+
+.retangulo{
+    width: 100%;
+    background-color: var(--corVerde);
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+.anima{
+    width:75px;
+    height: 75px;
+    background-color: orchid; 
+    animation-name: movimento;
+    animation-duration: 4s;
+    position: relative;
+    animation-iteration-count: infinite;
+}
+.quadrado{
+    width: 100px;
+    height: 100px;
+    
+}
+input:focus{
+    border: 4px solid red;
+}
+/*ids*/
+#q-1{
+    background-color: red;
+    order: 3;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    -webkit-clip-path: polygon(49% 48%, 31% 74%, 77% 31%);
+    clip-path: polygon(49% 48%, 31% 74%, 77% 31%);
+    width: 300px;
+}
+
+#q-1:hover{
+    background-color: yellow;
+    transform: rotate(45deg);
+}
+
+#q-2{
+    background-color: orange;
+    order: 1;
+    -webkit-box-shadow: 4px 6px 17px -1px rgba(0,0,0,0.67);
+-moz-box-shadow: 4px 6px 17px -1px rgba(0,0,0,0.67);
+box-shadow: 4px 6px 17px -1px rgba(0,0,0,0.67);
+}
+
+#q-3{
+    background: green;
+    order: 2;
+}
+@media(max-width: 900px){
+    #q-3{
+        background-color: black;
+    }
+}
+@media(min-width: 700px){
+    #q-3{
+        background-color: gray;
+    }
+}
+
+.retangulo div:first-child{
+    border: 10px solid slateblue;
+}
+
+#backpapa{
+    background-image: url(papagaio.png);
+    width: 400px;
+    height: 400px;
+    position: fixed;
+    justify-self: center;
+    bottom:0;
+}
+
+@keyframes movimento{
+    0%{
+        left:0px;
+    }
+    25%{
+        left: 100px;
+    }
+    50%{
+        left:0px;
+    }
+    75%{
+        left: 100px;
+    }
+    100%{
+        left: 0px;
+    }
+}

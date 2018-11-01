@@ -1,0 +1,102 @@
+FLEXBOX FROGGY jogo para estudar responsividade
+
+justify-content: space-around da o mesmo espaço entre os objetos entre a esquerda e direita.
+
+justify-content é para horizontal.
+
+align-itens é para vertical.
+
+oberserve que se mudarmos o flex direction esquerda se torna cima e direita baixo.
+
+perceba que o align-itens é de pai para filho, mas para mudar um único você deve usar o align-self.
+
+não existe um equivalente ao justify-self equivalente ao align-self, mas para a horizontal.
+
+o que aparece mais a baixo tem prioridade(ainda que repetindo a mesma classe/id).
+
+id tem prioridade sobre classe.
+
+o mais próximo tem prioridade(herdamos do nosso pai).
+
+para usar as coisas que tem flex, você deve usar o display flex
+
+padding empurra até encontrar uma borda e é a mais do que o tamanho
+
+//responsividade
+
+<meta name="viewport" content="width=device-width, initial-scale=1"> deixa você no controle da viewport
+ que é tudo que o usuário pode ver(tudo).
+
+flex-wrap: wrap permite que ao invés de espremer o conteúdo, ele quebra
+
+midia querry fala que apartir de tanto(min-width) ou até tanto(max-width) de resolução faça o que eu to mandando(é no css)
+@media(max-width: 900px) and ... obs: "," é ou{
+    h1{
+        ...
+    }
+}
+o midia tenta pegar o mais proximo também (estude por favor), pega o mais abaixo.
+
+pseudo classes são eventos que podem ser setados no css ex: hover.
+
+o :hover é quando o mouse ta em cima do elemento.
+
+o :focus é ao clicar.
+
+o p:first-child pegaria o p que é o primeiro filho de seu pai, pega direto do html(order do css n influencia), como isso não ta com id
+ele pegaria o do pai do pai e assim sucessivamente, last-child tem o mesmo funcionamento, mas para o último.
+nth-child(n) onde n é o índice é para pegar o n-ésimo elemento selecionado filho do seu pai
+
+ao inves de usar html{} use o :root{} usamos o root para criar variaveis ex: --corverde: #00FF00;
+para chamar a variavel depois usamos var(--corverde)
+
+//unidades de medidas
+    px - valor estático
+    vw - viewport width (1vw = 1/100 do width da viewport)
+    vh - viewport height (1vh = 1/100 do height da viewport)
+    % - valor disponível(pai)
+    rem - usado para fonte pega 100% do tamanho da font-size definida no root(para 1rem, 1.5rem = 150% and so on)
+    em - usado para fonte pega 100% do tamanho da font-size definida no pai(para 1rem, 1.5rem = 150% and so on)//nao é recomendada
+
+//position
+    relative - permite que eu mova mais facilmente meus filhos
+    absolute - as que quero mover
+    fixed - fixa a posição de alguma coisa na tela, em geral usamos para a barra de ferrementas
+
+//pluggins
+    clippy usado para ter liberdade para alterar uma div como você quiser, clippy css no google, depois copie o código do formato la
+    para o css da sua div.
+
+    css matic usado para fazer uma sombra facilmente e legal além de outras coisas como bordas por exemplo
+    , também basta copiar e colar
+    --a primeira linha serve, mas para navegadores antigos é melhor copiar tudo
+
+    slick para imagens ou divs ficarem passando tipo aquelas slide tals ~complicado de iniciar, mas bem interessante
+    (TOTALMENTE NECESSARIO USAR O INSPECIONAR)
+
+
+Use o script do java script só ao final do seu código, pois ele é lento para carregar.
+
+unsplash site com imagens legais e free.
+
+Olhar os seletores html
+
+normalize cdn ele tira as configurações padrão para seu código ficar limpo good :3
+usar <link href="link do normalize lá" type="text/css" rel="stylesheet">
+
+//tags meta
+    w3school olha lá :3
+
+//animações
+    loading.io site com várias animações simples no css
+    usamos @keyframes nome{
+        0%{
+            ...
+        }
+        50%{
+            ...
+        }
+    }
+    colocamos animation-name: nome; no que queremos que faça aquela animação
+    o % é relativo ao animation-duration
+    e para fazer infinitamente usamos animation-iteration-count;
