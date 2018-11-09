@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback CITi</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+</head>
+
+<body>
+    <div id="bannerDiv" class="grandeDiv">
+        <!--Aqui será onde colocaremos nosso slick-->
+    </div>
+
+    <div id="topFeedbacksDiv" class="grandeDiv">
+        <!--Aqui será onde colocaremos os tops feedbacks-->
+        <div class="tituloArea">
+            <hr>
+            <p class="titulo">
+               Top Feedbacks
+            </p>
+            <hr>
+        </div>
+
+        <div id="trioDivImg">
+            <!--esse será o div contendo as 3 imagens separadas em seus respectivos divs-->
+            <div class="DivImg">
+                <p class="texto">
+                    Nome1
+                </p>
+                <img src="imagens/Victor.jpg" class="imgTop">
+                <div class="iconNumDiv">
+                    <img>
+                    <p class="texto">
+                        9
+                    </p>
+                </div>
+            </div>
+
+            <div class="DivImg">
+                <p class="texto">
+                    Nome2
+                </p>
+                <img src="imagens/Veiga.jpeg" class="imgTop">
+                <div class="iconNumDiv">
+                    <img>
+                    <p class="texto">
+                        7
+                    </p>
+                </div>
+            </div>
+
+            <div class="DivImg">
+                <p class="texto">
+                    Nome3
+                </p>
+                <img src = "imagens/Pamella.jpeg" class="imgTop">
+                <div class="iconNumDiv">
+                    <img>
+                    <p class="texto">
+                        4
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="enviarFeedbackDiv" class="grandeDiv">
+        <!--Aqui será onde colocaremos o envio dos feedbacks-->
+        <div class="tituloArea">
+            <hr>
+            <p class="titulo" id="tituloEnviar">
+                Enviar meu feedback
+            </p>
+            <hr>
+        </div>
+        <div id="grupoFeed">
+            <div class="grupoInp" id="primeiroInpG">
+                <label class="textoL">Meu nome</label>
+                <input type="text" class="inFeed">
+            </div>
+            <div class="grupoInp">
+                <label class="textoL">E-mail do destinatário</label>
+                <input type="text" class="inFeed" placeholder="nome.nome@citi.org,br">
+            </div>
+        </div>
+        <div id="grupoLF">
+            <label class="textoL">Feedback</label>
+            <input type="text" class="inFeed">
+        </div>
+        <button class="titulo" id="send">
+            Enviar
+        </button>
+    </div>
+
+</body>
+
+</html>

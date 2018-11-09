@@ -1,0 +1,173 @@
+/*organizando o básico para a página toda*/
+
+:root{
+    --corgeral: #8CBA4E;
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+}
+
+body{
+    margin: 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+/*organizando os títulos*/
+
+.tituloArea{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 10%;
+}
+
+.titulo{
+    color: var(--corgeral);
+    font-weight: lighter;
+    width: 30%;
+    justify-self: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 22px;
+}
+
+
+.tituloArea hr{
+    width: 100%;
+    border-width: 1px 0px 0px 0px;
+    border-color: var(--corgeral);
+}
+
+.tituloArea #tituloEnviar{
+    width: 40%;
+}
+
+/*separando os principais divs*/
+.grandeDiv{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+#topFeedbacksDiv{
+    margin-top: 5%;
+}
+
+#trioDivImg{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 88%;
+    margin-top: 2%;
+}
+
+.DivImg{
+    width: 25%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.DivImg .texto{
+    width: 100%;
+}
+.imgTop{
+    height: 300px;
+    width: auto;
+    min-width: 150px;
+}
+.iconNumDiv{
+    position: absolute;
+    align-self: center;
+    z-index: 1;
+}
+#enviarFeedbackDiv{
+    background-color: #FBFDF9;
+    margin-top: 5%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*lidando com a parte feedback*/
+
+#grupoFeed{
+    width: 60%;
+    height: 25%;
+    margin: 0% 20% 0% 20%;
+    display: flex;
+    align-items: center;
+}
+
+.grupoInp{
+    width: 45%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+
+#primeiroInpG{
+    margin-right: 10%;
+}
+
+.inFeed{
+    border-color: var(--corgeral);
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+    height: 60%;
+    background-color: #FBFDF9;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    font-size: 14px;
+    width: 100%;
+}
+
+.inFeed::placeholder{
+    color: darkgray;
+}
+
+.inFeed:focus{
+    outline: none;
+}
+
+.textoL{
+    width: 100%;
+    height: 30%;
+    font-size: 10px;
+    color: var(--corgeral);
+}
+#send{
+    width: 10%;
+    height: 15%;
+    margin-bottom: 5%;
+    align-self: center;
+    font-weight: normal;
+    border-width: 0px;
+    border-style: none;
+    background-color: #FBFDF9;
+    margin-left: 45%;
+    margin-right: 45%;
+}
+
+#grupoLF{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 1% 20% 1% 20%;
+    height: 43%;
+}
+#grupoLF .textoL{
+    width: 100%;
+    height: 9%;
+    margin-bottom: 1%;
+}
+#grupoLF .inFeed{
+    width: 100%;
+    height: 90%;
+    text-align: left;
+}
