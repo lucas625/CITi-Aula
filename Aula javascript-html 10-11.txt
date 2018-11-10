@@ -1,0 +1,113 @@
+Quokka framework de js que mostra no console o que você está fazendo.
+//js
+let x=10;
+let y=15;
+console.log("oi");
+let pessoas = [{nome: "lucas", idade: 21}, {nome: "pedro", idade: 30}];
+console.log(pessoas);
+console.log(pessoas[0].nome);
+const funcaoAux = (name, age = 23) => {
+    //arrow function
+}
+c =10;
+console.log(c);
+
+//atividade
+
+let a = {nome: "lucas", idade: 21, CPF: "103"};
+let b = {nome: "Andrew", idade: 22, CPF: "155"};
+const func = (pessoa) =>{
+    for(let a=0; a<3;a++){
+        switch (a){
+            case 0:
+                console.log(pessoa.nome);
+                break;
+            case 1:
+                console.log(pessoa.idade);
+                break;
+            case 2:
+                console.log(pessoa.CPF);
+                break;
+        }          
+    
+    }
+}
+func(a);
+func(b);
+//
+podemos usar document.querySelector(".a");
+para capturarmos a classe "a". Ele pode substituir
+todos os document.get... para html
+podemos usar let botao = document.querySelector("#a").style;
+e ai editamos por botao.color = "red"; por exemplo
+os estilos adicionados no js são os que ficam por último, pois carregam depois
+
+.innerHTML pega o que tem dentro daquela tag (entre o abre e fecha: <div> oi </div> pegaria "oi")
+da até para mudar o innerhtml colocando mais tags ali dentro
+typeof perereparara pega o tipo daquela coisa 
+
+para inserir algo que não é texto numa string usamos `${name} é o meu nome` (com crase mesmo)
+.value pega o valor da input
+não adianta pegar uma variavel b = document.querySelector("#id");
+e depois querer b.innerHTML += ....
+para isso você deve fazer diretamente
+document.querySelector("#id").innerHTML += ....
+
+//fazer o botao mudar de cor e aparecer uma mensagem ao clicar
+document.querySelector('#btn').setAttribute('class','pre');
+let a =0;
+document.querySelector('#btn').addEventListener('click',()=>{
+    if(a===0){
+        a=1;
+        document.querySelector('#btn').setAttribute('class','pos');
+        document.querySelector('#mensagem').innerHTML = 'você clicou no botão';
+    }else{
+        a=0;
+        document.querySelector('#btn').setAttribute('class','pre');
+        document.querySelector('#mensagem').innerHTML = '';
+    }
+
+})
+document.querySelector('html').addEventListener('keydown',(e)=>{
+    if(e.key="o")
+        document.querySelector('#mensagem').innerHTML = 'k,jhfsdhifuhcifsdlugds';
+});
+//
+
+USE SEMPRE ASPAS SIMPLES
+
+document.querySelector('#main-button').addEventListener('click',()=>...);
+querySelector('input[name=cpf]') para pegar a input com nome de cpf (devemos usar name para input e não id).
+.setAttribute('class', 'setar');
+
+addEventListener
+('situação',arrowfunction)
+const a = (e)=>{
+
+}
+também é possível colocar a no lugar de arrow function, perceba que esse "e" é o evento e aparece tudo que aconteceu
+ai precisaremos lidar com o conteúdo de lá.
+use o e.preventDefault(); evitamos que o browser use seus procedimentos padrões do evento
+
+ao usar href='.arroz' num link, ele leva para a classe arroz da página.
+setTimeout(funcao, espera) significa espere e depois faça a função.
+
+para importar o jquery vá no w3school e pega o jquery cdn
+$ = document.querySelector
+usa o $('').css('qual atributo','o valor q ele deve ter');
+attr=setAttribute
+html = innerHTML
+mas o html é funcao logo html()
+use o .append() para o += tals
+
+ajax faz a requisição sem a página mudar
+
+procure youmightnotneedjquery
+
+$.get('url',(res)=>{
+    //funcao q vai ser executada ao receber a resposta da requisição
+})
+
+$.post('url',{name:'arroz', preco:'20'}, (res)=>{
+    //callback funcao a ser exec...
+})
