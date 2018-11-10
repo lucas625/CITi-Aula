@@ -3,23 +3,40 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Feedback CITi</title>
-    <link type="text/css" rel="stylesheet" href="style.css">
+    <title>Feedbacks CITi</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick.css"/>
 </head>
 
 <body>
-    <div id="bannerDiv" class="grandeDiv">
-        <!--Aqui será onde colocaremos nosso slick-->
-    </div>
+    <div id="conjuntoBanner">
+        <div id="logoDiv">
+            <hr>
+            <img src="imagens/citi.png" id="logo">
+            <hr>
+        </div>
+        <p id="subT">
+            Feedback
+        </p>
+        <div id="bannerpF">
+            <div id="banner">
+                <img id="op1" class="dimg" src="imagens/CITi_Citanda-1.JPG"></img>
+                <img id="op2" class="dimg" src="imagens/CITi_Citanda-2.JPG"></img>
+                <img id="op3" class="dimg" src="imagens/CITi_Citanda-3.jpg"></img>
+            </div>
+            <div id="fundobanner"> </div>
+        </div>
 
+    </div>
     <div id="topFeedbacksDiv" class="grandeDiv">
         <!--Aqui será onde colocaremos os tops feedbacks-->
         <div class="tituloArea">
             <hr>
             <p class="titulo">
-               Top Feedbacks
+                Top Feedbacks
             </p>
             <hr>
         </div>
@@ -27,25 +44,31 @@
         <div id="trioDivImg">
             <!--esse será o div contendo as 3 imagens separadas em seus respectivos divs-->
             <div class="DivImg">
-                <p class="texto">
-                    Nome1
-                </p>
+                <div class="textoplinha">
+                    <hr>
+                    <p class="texto">
+                        Victor Aguiar
+                    </p>
+                </div>
                 <img src="imagens/Victor.jpg" class="imgTop">
                 <div class="iconNumDiv">
-                    <img>
-                    <p class="texto">
+                    <img src="imagens/paper-plane.svg">
+                    <div class="texto">
                         9
-                    </p>
+                    </div>
                 </div>
             </div>
 
             <div class="DivImg">
-                <p class="texto">
-                    Nome2
-                </p>
+                <div class="textoplinha">
+                    <hr>
+                    <p class="texto">
+                        Rafael Veiga
+                    </p>
+                </div>
                 <img src="imagens/Veiga.jpeg" class="imgTop">
                 <div class="iconNumDiv">
-                    <img>
+                    <img src="imagens/paper-plane.svg">
                     <p class="texto">
                         7
                     </p>
@@ -53,12 +76,15 @@
             </div>
 
             <div class="DivImg">
-                <p class="texto">
-                    Nome3
-                </p>
+                <div class="textoplinha">
+                    <hr>
+                    <p class="texto">
+                        Pamella Bezerra
+                    </p>
+                </div>
                 <img src = "imagens/Pamella.jpeg" class="imgTop">
                 <div class="iconNumDiv">
-                    <img>
+                    <img src="imagens/paper-plane.svg">
                     <p class="texto">
                         4
                     </p>
@@ -67,17 +93,16 @@
         </div>
 
     </div>
-
     <div id="enviarFeedbackDiv" class="grandeDiv">
         <!--Aqui será onde colocaremos o envio dos feedbacks-->
-        <div class="tituloArea">
+        <div class="tituloArea" id="teAV">
             <hr>
             <p class="titulo" id="tituloEnviar">
                 Enviar meu feedback
             </p>
             <hr>
         </div>
-        <div id="grupoFeed">
+        <form id="grupoFeed">
             <div class="grupoInp" id="primeiroInpG">
                 <label class="textoL">Meu nome</label>
                 <input type="text" class="inFeed">
@@ -86,16 +111,32 @@
                 <label class="textoL">E-mail do destinatário</label>
                 <input type="text" class="inFeed" placeholder="nome.nome@citi.org,br">
             </div>
-        </div>
-        <div id="grupoLF">
-            <label class="textoL">Feedback</label>
-            <input type="text" class="inFeed">
-        </div>
+            <div id="grupoLF">
+                <label class="textoL">Feedback</label>
+                <textarea type="text" class="inFeed"></textarea>
+            </div>
+        </form>
+
         <button class="titulo" id="send">
             Enviar
         </button>
     </div>
-
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="slick-1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#banner').slick({
+                autoplay: true,
+                autoplaySpeed: 5000,
+                nextArrow: '<button type="button" class="slick-next"></button>',
+                prevArrow: '<button type="button" class="slick-prev"></button>'
+        });
+        });
+    </script>
 </body>
 
 </html>

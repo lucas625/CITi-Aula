@@ -1,18 +1,122 @@
-/*organizando o básico para a página toda*/
-
 :root{
     --corgeral: #8CBA4E;
-    width: 100%;
-    height: 100%;
+    --corFB: #FBFDF9;
     font-family: 'Roboto', sans-serif;
     font-weight: lighter;
 }
-
-body{
-    margin: 0px;
-    display: flex;
-    flex-wrap: wrap;
+body {
+    margin: 0;
 }
+
+/* parte da primeira seção*/
+#conjuntoBanner{
+    position: relative;
+    display: flex;
+    height: 115vh;
+    width: 100%;
+}
+#bannerpF{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+}
+#banner{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+}
+#fundobanner{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 45;
+    background-color: rgba(140,186,78,0.4);
+    margin: 0;
+    align-self: flex-start;
+}
+div.slick-list.draggable{
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+}
+.slick-track{
+    width: 100%;
+    height: 100%;
+
+}
+.dimg{
+    width: 100%;
+    height: 100%;
+}
+div#banner.slick-initialized.slick-slider{
+    display: flex;
+}
+button.slick-next.slick-arrow{
+    border: none;
+    padding:0;
+    background-color: rgba(255,255,255,0.8);
+    align-self: center;
+    z-index: 50;
+    width: 10%;
+    height: 15%;
+    margin: 0;
+    position: absolute;
+    transform: rotate(180deg);
+    right: 0%;
+    /*usando clippy para deixar botão parecendo com uma setinha*/
+    -webkit-clip-path: polygon(39% 1%, 10% 50%, 10% 50%, 10% 50%, 10% 50%, 40% 100%, 0% 50%);
+    clip-path: polygon(39% 1%, 10% 50%, 10% 50%, 10% 50%, 10% 50%, 40% 100%, 0% 50%);
+}
+button.slick-prev.slick-arrow{
+    border: none;
+    margin: 0;
+    padding:0;
+    background-color: rgba(255,255,255,0.8);
+    align-self: center;
+    z-index: 50;
+    width: 10%;
+    height: 15%;
+    margin:0;
+    position: absolute;
+    /*usando clippy para deixar botão parecendo com uma setinha*/
+    -webkit-clip-path: polygon(39% 1%, 10% 50%, 10% 50%, 10% 50%, 10% 50%, 40% 100%, 0% 50%);
+    clip-path: polygon(39% 1%, 10% 50%, 10% 50%, 10% 50%, 10% 50%, 40% 100%, 0% 50%);
+}
+#logoDiv{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    z-index: 51;
+}
+#logoDiv hr{
+    border-color: rgb(255,255,255);
+    border-width: 0 0 1px 0;
+    margin: 0;
+    width: 40%;
+    align-self: center;
+}
+#logo{
+    width: 20%;
+    height: auto;
+    display: flex;
+}
+#subT{
+    z-index: 53;
+    width: auto;
+    font-size: 24px;
+    margin: 0;
+    justify-self: center;
+    position: absolute;
+    top: 20%;
+    color: rgb(255,255,255);
+    left: 45%;
+    right: 50%;
+}
+
 /*organizando os títulos*/
 
 .tituloArea{
@@ -22,7 +126,6 @@ body{
     width: 100%;
     height: 10%;
 }
-
 .titulo{
     color: var(--corgeral);
     font-weight: lighter;
@@ -33,85 +136,129 @@ body{
     justify-content: center;
     font-size: 22px;
 }
-
-
 .tituloArea hr{
     width: 100%;
     border-width: 1px 0px 0px 0px;
     border-color: var(--corgeral);
 }
-
-.tituloArea #tituloEnviar{
+#tituloEnviar{
     width: 40%;
 }
 
-/*separando os principais divs*/
+/*div classe da 2 e 3 seções*/
+
 .grandeDiv{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-
 }
+
+/*fazendo a 2° seção*/
 
 #topFeedbacksDiv{
     margin-top: 5%;
 }
-
 #trioDivImg{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    height: 88%;
-    margin-top: 2%;
+    height: 68%;
+    margin: 2% 15% 0 15%;
 }
-
 .DivImg{
     width: 25%;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    /*css matic para shadow box*/
+    -webkit-box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.5);
+}
+.textoplinha{
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+.textoplinha hr{
+    position: absolute;
+    width: 100%;
+    align-self: center;
+    z-index: 1;
+    border-color: var(--corgeral);
+    border-width: 0 0 1px 0;
+    margin: 0;
 }
 .DivImg .texto{
     width: 100%;
+    text-align: center;
 }
 .imgTop{
     height: 300px;
-    width: auto;
-    min-width: 150px;
+    width: 100%;
 }
 .iconNumDiv{
     position: absolute;
     align-self: center;
     z-index: 1;
+    width: 20%;
+    height: 10%;
+    bottom: 0;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    /*css matic para bordas*/
+    border-radius: 10px 10px 0px 0px;
+    -moz-border-radius: 10px 10px 0px 0px;
+    -webkit-border-radius: 10px 10px 0px 0px;
+    border: 0px solid #000000;
 }
+.iconNumDiv img{
+    width: 50%;
+    height: auto;
+    margin: 0;
+}
+.iconNumDiv .texto{
+    width: 50%;
+    margin: 0;
+    height: 100%;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*lidando com a parte feedback*/
+
 #enviarFeedbackDiv{
     background-color: #FBFDF9;
     margin-top: 5%;
     display: flex;
     flex-wrap: wrap;
+    height: 60vh;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 0;
 }
-
-/*lidando com a parte feedback*/
-
 #grupoFeed{
-    width: 60%;
-    height: 25%;
+    width: 80%;
+    height: 70%;
     margin: 0% 20% 0% 20%;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
-
 .grupoInp{
     width: 45%;
     display: flex;
     flex-wrap: wrap;
-    height: 100%;
-}
-
-
-#primeiroInpG{
-    margin-right: 10%;
+    height: 15%;
+    margin: 0;
+    justify-self: right;
 }
 
 .inFeed{
@@ -125,41 +272,42 @@ body{
     font-size: 14px;
     width: 100%;
 }
-
 .inFeed::placeholder{
     color: darkgray;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
 }
-
 .inFeed:focus{
     outline: none;
 }
-
 .textoL{
     width: 100%;
     height: 30%;
-    font-size: 10px;
+    font-size: 12px;
     color: var(--corgeral);
 }
 #send{
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    padding: 0;
     width: 10%;
-    height: 15%;
-    margin-bottom: 5%;
-    align-self: center;
+    height: 10%;
+    margin-top: 5%;
+    align-self: flex-end;
     font-weight: normal;
     border-width: 0px;
     border-style: none;
     background-color: #FBFDF9;
-    margin-left: 45%;
-    margin-right: 45%;
+    justify-self: center;
+    margin-bottom: 2%;
 }
-
 #grupoLF{
     width: 100%;
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    margin: 1% 20% 1% 20%;
-    height: 43%;
+    height: 80%;
+    margin-top: 5%;
 }
 #grupoLF .textoL{
     width: 100%;
@@ -170,4 +318,121 @@ body{
     width: 100%;
     height: 90%;
     text-align: left;
+}
+
+
+/*parte mais responsiva com uso os media*/
+
+
+@media (max-width: 1024px) and (max-height: 1366px){
+    #conjuntoBanner{
+        height: 60vh;
+    }
+    .titulo{
+        font-size: 26px;
+        width: 25%;
+    }
+    .tituloArea hr{
+        width: 37.5%;
+    }
+    #tituloEnviar{
+        width: 30%;
+        max-width: 50%;
+    }
+}
+@media (max-width: 768px) {
+    #conjuntoBanner{
+        height: 45vh;
+    }
+    #subT{
+        font-size: 16px;
+        left: 45%;
+        top: 15%;
+    }
+    #logoDiv{
+        height: 15%;
+    }
+    #tituloEnviar{
+        width: 45%;
+    }
+}
+@media (max-width: 750px){
+    #trioDivImg{
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .DivImg{
+        margin-bottom: 6%;
+        width: 70%;
+        margin-right: 15%;
+        margin-left: 15%;
+        justify-self: center;
+    }
+    #teAV hr{
+        display: none;
+    }
+    #grupoFeed{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .grupoInp{
+        width: 100%;
+        margin-bottom: 10%;
+    }
+    #grupoLF{
+        height: 50%;
+        margin-top: 0%;
+    }
+}
+@media (max-width: 414px) {/*Pixel2*/
+    #conjuntoBanner{
+        height: 30vh;
+    }
+    #logoDiv{
+        height: 15%;
+    }
+    #subT{
+        font-size: 10px;
+        left: 42.5%;
+        top: 15%;
+    }
+    .titulo{
+        font-size: 16px;
+        width: 30%;
+    }
+    .tituloArea hr{
+        width: 35%;
+    }
+    #tituloEnviar{
+        width: 50%;
+    }
+}
+@media (max-width: 375px) {
+    #tituloEnviar{
+        width: 50%;
+    }
+}
+@media(max-width: 360px){/*Galaxy S5*/
+    #conjuntoBanner{
+        height: 30vh;
+    }
+    #subT{
+        font-size: 12px;
+    }
+    .imgTop{
+        height: 200px;
+    }
+    .titulo{
+        font-size: 14px;
+        width: 30%;
+    }
+    .tituloArea hr{
+        width: 35%;
+    }
+}
+@media(max-width: 320px){
+    #tituloEnviar{
+        width: 50%;
+    }
 }
