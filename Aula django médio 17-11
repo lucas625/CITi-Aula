@@ -1,0 +1,64 @@
+perceba que iremos lá em settings eventualmente para configurar as coisas necessárias
+la em settings installed apps vc deve colocar cada aplicativo usado, inclusive o seu app
+la em urls você deve colocar as urls que você está usando, o formato está la
+    -o name será a maneira como vamos chamar o link dentro do código
+    -path('', HomeView.as_view(),name='') dentro da primeira '' ficaria algo/ para páginas adicionais
+    -o path tá vazio pois essa é a pag inicial
+django é um url -> view -> template (nós vemos o template)
+view: pega uma requisição e faz algo
+    -from django.views.generic import TemplateView
+    -necessário importar a classe no urls from core.views import HomeView
+crie a pasta templates dentro da pasta do app, pois o django já reconhece.
+la em settings em static colocamos aquilo que não vai ser mudado, como as imagens (usar a pasta)
+    -STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+    '/var/www/static/',
+]  fica dentro todas as pastas com arquivos estaticos para ajudar o django
+use {% load static %} no template do html para que ele use as coisas que estão no static
+mas ainda é necessário linkar
+    usamos assim para fazer a referencia href='{% static 'css/style.css' %}'
+Models: cria tabelas
+    CharField para coisas pequenas, tipo um titulo (necessário usar max_length)
+    TextField para textos normais
+    class Post(models.Model):
+        author = models.ForeignKey('auth.User', on_delete=models.CASCADE) #faz com que ao deletar ele, delete tudo que tem ele
+        title = models.CharField(max_length=100)
+        text = models.TextField()
+        created_date = models.DateTimeField(auto_now_add=True) #significa na hora que o objeto pe criado
+        updated_date = models.DateTimeField(auto_now=True) #assim que você faz
+        use blank, null para dizer se podem ser blank ou null
+migrações propagam as alterações dos models para o banco de dados(efetiva as mudanças, sempre usar ao editar os models)
+    -python manage.py makemigrations
+    -python manage.py migrate
+    -o arquivo 0001_initial em migrations guarda as informações do banco de dados, interessante olhar lá para ver se está certo
+use o python manage.py createsuperuser para ir criando seu primeiro usuário
+No arquivo admin.py use 
+    -from core.models import Post
+    -admin.site.register(Post)
+    para registrar seu model que nesse caso é a classe Post.
+Use dentro da classe no models para mudar o nome visível para o cliente
+    class Meta: 
+            verbose_name = 'Publicação'
+            verbose_name_plural = 'Publicações' #avisa ao django que tem o plural
+    def __str__(self): #deixa a postagem com nome titulo
+            return self.title
+Lá em views, na classe da home use (lembrando de importar)
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["posts"] = Post.objects.all()
+        return context
+    Desta forma você vai passar as info do banco de dados para a main page
+Lá no html(template) use o 
+            {% for post in posts %}
+                <div class="post__card">
+                    <!-- https://docs.djangoproject.com/en/dev/ref/templates/builtins/#date -->
+                    <span class="post__date">
+                        CREATED ON {{post.created_date | date:'d.m.y' }} AT {{post.created_date | time:'H:i'}} / UPDATED ON {{post.updated_date | date:'d.m.y' }} AT {{post.updated_date | time:'H:i'}}
+                    </span>
+                    <h1 class="post__title">{{ post.title }}</h1>
+                    <span class="post__author">
+                            WRITE BY @{{ post.author }}
+                        </span>
+                    <div class="post__text">{{ post.text }}</div>
+                </div>
+            {% endfor %}
