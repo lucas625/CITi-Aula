@@ -1,0 +1,28 @@
+-ótimo para escalabilidade
+-funciona para front e para back
+-Para instalar
+    abra o site do note (node js.org)
+    baixe a segunda mais recente
+-npm = pip
+-node = django
+-use npm init para iniciar o projeto(a pasta n pode ter espaços no nome)
+    vá dando enter
+    em entry point vc de escrever ao lado app.js
+npm install express --save (express é um framework pro node para requerimentos web) no cmd (o --save instala pra quem acessar, necessário para tudo que for essencial)
+    const express = require('express'); no app.js
+    const app = express(); no app.js
+-boiler plate é aquilo que é necessário para iniciar qualquer projeto.
+    https://github.com/L1224rd/node_boilerplate
+-app.listen(3000, ()=>{ // inicia o server no pc
+    console.log('Ready');
+});
+instale o nodemon (npm install -g nodemon)
+para mais detalhes abra o app.js
+o node da mais liberdade, você que tem q fazer as coisas.
+olhe o EJS
+olhe REST
+req.query para passar info do front pro back, necessário mudar na barra de url
+npm install body-parser --save
+o body-parser lida com o post, abrindo as informações
+the definitive node js handbook freecodecamp
+firebase para banco de dados
